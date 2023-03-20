@@ -1,0 +1,96 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+}
+
+h1{
+    font-family: 'Shrikhand';
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 44px;
+}
+
+h2 {
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 28px;
+}
+
+h3{
+    font-family: 'Roboto';
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+}
+
+p {
+    font-family: 'Roboto';
+}
+
+button {
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+    border-radius: 25px;
+    background: linear-gradient(0deg, #9356DC -5.2%, #FF79DA 110.74%);
+    border: none;
+    
+}
+
+.logo {
+    height: 63px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    
+}
+
+.location {
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    column-gap: 17px;
+    align-items: center;
+    justify-content: center;
+    background-color: #EAEAEA;
+    background: linear-gradient(180deg, rgb(199, 199, 199) 0%, #e3e1e1 10%);
+    
+}
+
+.reservation {
+    background-color: #F6F6F6; 
+    height: 287px;
+}
+
+.reservation div h2{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 39px 58px 0px 42px;  
+    height: 105px;
+}
+
+.reservation div p {
+    color: #353535; 
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding: 0px 26px 27px 34px;
+}
+
+.reservation button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 13px 18px;
+    color: #FFFFFF;
+    margin: auto;
+}
