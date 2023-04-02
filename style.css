@@ -109,9 +109,18 @@ button {
     margin: auto;
 }
 
+.reservation button:active {
+    opacity: 0.7;
+}
+
 /* Fonctionnement */
 
 .fonction {
+    padding: 50px 30px;
+    height: 440px;
+}
+
+.etapes {
     display: flex;
     flex-direction: column;
     padding: 50px 30px;
@@ -182,6 +191,12 @@ button {
     row-gap: 25px;
 }
 
+.row {
+    display: flex;
+    flex-direction: column;
+    row-gap: 25px;
+}
+
 .cards a {
     width: 100%;
     height: 240px;
@@ -233,6 +248,111 @@ button {
     font-size: 25px;
 }
 
+
+/* Pages restaurants */
+
+.fa-arrow-left {
+    position: absolute;
+    left: 5%;
+    top: 20px;
+    font-size: 22px;
+}
+
+.menu { 
+    background-color: #F7F7F7;
+    padding: 40px 13px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+    position: relative;
+    border-radius: 50px 50px 0px 0px;
+    top: -40px;
+    
+}
+
+.heart {
+    position: absolute;
+    left: 83%;
+    top:3%;
+}
+
+.fa-heart { 
+    width: 50px;
+    height: 49px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.fa-heart:active {
+    background: linear-gradient(0deg, #9356DC -5.2%, #FF79DA 110.74%);
+}
+
+.carte {
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
+}
+
+.tittle {
+    border-bottom: solid 3px #99E2D0;
+    width: 40px;
+    padding-bottom: 5px;
+}
+
+.carte div {
+    display: flex;
+    flex-direction: column;
+    row-gap: 12px;
+}
+
+.carte div button {
+    background: white;
+    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
+    border-radius: 15.0431px;
+    padding: 12px 0px 12px 15px;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: relative;
+}
+
+.price {
+    display: flex;
+    position: absolute;
+    left: 90%;
+    bottom: 19%;
+}
+
+
+/* Animation */
+
+
+
+
+/* Bouton commander */
+.commande {
+    padding: 40px 92px
+}
+
+.commande button{
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
+    border-radius: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 18px;
+    width: 186px;
+    color: #FFFFFF;
+    margin: auto;
+    font-size: 16px;
+}
+
+.commande button:active {
+    opacity: 0.7;
+}
+
 /* Footer */
 
 footer {
@@ -271,99 +391,96 @@ footer a {
     height: 13px;
 }
 
-/* La palette du goût */
+@media screen and (min-width: 960px) {
 
-.logo i {
-    position: absolute;
-    left: 5%;
-    font-size: 22px;
+/* Accueil */
+
+.reservation {
+    height: unset;
+    height: 230px;
 }
 
-.menu { 
-    background-color: #F7F7F7;
-    padding: 40px 13px;
+.fonction {
+    height: 228px;
+}
+
+.etapes {
+    display: flex;
+    flex-direction: row;
+    column-gap: 30px;
+}
+
+.cards {
     display: flex;
     flex-direction: column;
-    row-gap: 30px;
-    position: relative;
-    border-radius: 50px 50px 0px 0px;
-    bottom: 50px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    column-gap: 90px;
+
+}
+.cards a {
+    width: unset;
+    height: unset; 
     
+}
+
+.cards img {
+    height: unset;
+    height: 160px;
+}
+
+.restaurants {
+    height: unset;
+    row-gap: 30px;
+}
+
+/* Page restaurants */
+
+header img {
+    height: 400px;
+    object-fit: cover;
+}
+
+.menu {
+    width: unset;
+    width: 80%;
+    margin: auto;
+    padding: 50px 210px;
+}
+
+.menu h1 {
+    margin: auto;
 }
 
 .heart {
     position: absolute;
-    left: 83%;
-    top:3%;
+    left: 70%;
+    top:4%;
 }
 
-.fa-heart { 
-    width: 50px;
-    height: 49px;
-    display: flex;
-    align-items: center;
+
+/* Footer */
+
+footer {
+    
+    padding-top: 60px;
     justify-content: center;
-    font-size: 30px;
-}
-
-.carte {
     display: flex;
-    flex-direction: column;
-    row-gap: 30px;
-}
-
-.tittle {
-    border-bottom: solid 3px #99E2D0;
-    width: 40px;
-    padding-bottom: 5px;
-}
-
-.carte div {
-    display: flex;
-    flex-direction: column;
-    row-gap: 12px;
-}
-
-.carte div button {
-    background: white;
-    box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
-    border-radius: 15.0431px;
-    padding: 12px 0px 12px 15px;
-    display: flex;
-    flex-direction: column;
-    width: 100%;
+    flex-direction: row;
+    height: unset;
+    height: 110px;
+    column-gap: 18px;
     position: relative;
 }
 
-.price {
-    display: flex;
+footer h1 {
     position: absolute;
-    left: 87%;
-    bottom: 19%;
+    left: 85%;
+    top:40px
+
 }
 
-
-/* Animation */
-
-
-
-
-/* Bouton commander */
-.commande {
-    padding: 40px 92px
 }
-
-.commande button{
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.35);
-    border-radius: 25px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 18px;
-    width: 186px;
-    color: #FFFFFF;
-    margin: auto;
-    font-size: 16px;
-}
-
-
