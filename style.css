@@ -4,10 +4,31 @@
     box-sizing: border-box;
 }
 
+
 header {
     display: flex;
     flex-direction: column;
 }
+
+
+.description .fa-heart { 
+    width: 50px;
+    height: 49px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.fas {
+    opacity: 0;
+}
+
+.fas:hover {
+    opacity: 1;
+    transition: all 500ms ease-in-out;
+}
+
 
 h1{
     font-family: 'Shrikhand';
@@ -118,6 +139,7 @@ button {
 .fonction {
     padding: 50px 30px;
     height: 440px;
+    background-color: #EAEAEA;
 }
 
 .etapes {
@@ -166,14 +188,11 @@ button {
 
 
 
-.row button:hover, i:hover {
-    background-color: #F5EDFF;
+i:hover {
     color:#9356DC;
 }
 
 /* Restaurants */
-
-
 
 .restaurants {
     background-color: #F6F6F6;
@@ -182,20 +201,17 @@ button {
     padding: 54px 30px;
     height: 1226px;
     row-gap: 30px;
-    position: relative;
+    
 }
 
 .cards {
     display: flex;
     flex-direction: column;
     row-gap: 25px;
+    position: relative;
+    
 }
 
-.row {
-    display: flex;
-    flex-direction: column;
-    row-gap: 25px;
-}
 
 .cards a {
     width: 100%;
@@ -205,6 +221,7 @@ button {
     border-radius: 20px;
     background-color: white;
     box-shadow: 0px 3px 15px #0000001a;
+    position: relative;
 }
 
 .cards img {
@@ -212,7 +229,7 @@ button {
     height: 170px;
     border-radius: 20px 20px 0px 0px;
     object-fit: cover;
-    position: relative;
+    
 }
 
 .cards .new {
@@ -221,7 +238,8 @@ button {
     background-color: #99E2D0;
     padding: 6px 12px;
     font-size: 14px;
-    left: 70%;
+    right: 20px;
+    top: 20px;
     width: 80px;
     height: 29px;
 } 
@@ -267,16 +285,17 @@ button {
     position: relative;
     border-radius: 50px 50px 0px 0px;
     top: -40px;
+}
     
+header img {
+    object-fit: cover;
+    height: 300px;
 }
 
 .heart {
     position: absolute;
-    left: 83%;
+    left: 85%;
     top:3%;
-}
-
-.fa-heart { 
     width: 50px;
     height: 49px;
     display: flex;
@@ -285,9 +304,11 @@ button {
     font-size: 30px;
 }
 
-.fa-heart:active {
-    background: linear-gradient(0deg, #9356DC -5.2%, #FF79DA 110.74%);
+.heart .fas {
+    position: relative;
+    right:30px;
 }
+
 
 .carte {
     display: flex;
@@ -305,7 +326,10 @@ button {
     display: flex;
     flex-direction: column;
     row-gap: 12px;
+    overflow:hidden; 
+    
 }
+
 
 .carte div button {
     background: white;
@@ -316,7 +340,89 @@ button {
     flex-direction: column;
     width: 100%;
     position: relative;
+    white-space:nowrap; 
+    text-overflow:ellipsis;
 }
+
+.anim1 {
+    animation-duration: 2s;
+    animation-name: slidein;
+    animation-delay: 0.1s;
+}
+
+.anim2 {
+    animation-duration: 2s;
+    animation-name: slidein;
+    animation-delay: 0.3s;
+}
+
+.anim3 {
+    animation-duration: 2s;
+    animation-name: slidein;
+    animation-delay: 0.5s;
+}
+
+.anim4 {
+    animation-duration: 2s;
+    animation-name: slidein;
+    animation-delay: 0.7s;
+}
+
+.anim4 {
+    animation-duration: 2s;
+    animation-name: slidein;
+    animation-delay: 0.9s;
+}
+
+.anim5 {
+    animation-duration: 2s;
+    animation-name: slidein;
+    animation-delay: 1.1s;
+}
+
+.anim6 {
+    animation-duration: 2s;
+    animation-name: slidein;
+    animation-delay: 1.3s;
+}
+
+.anim7 {
+    animation-duration: 2s;
+    animation-name: slidein;
+    animation-delay: 1.5s;
+}
+
+.anim8 {
+    animation-duration: 2s;
+    animation-name: slidein;
+    animation-delay: 1.7s;
+}
+
+.anim9 {
+    animation-duration: 2s;
+    animation-name: slidein;
+    animation-delay: 1.9s;
+}
+
+.anim10 {
+    animation-duration: 2s;
+    animation-name: slidein;
+    animation-delay: 2.1s;
+}
+
+@keyframes slidein {
+  from {
+    opacity: 0;
+    margin-bottom: 10%;
+    width: 100%;
+  }
+
+  to {
+    margin-bottom: 0%;
+    width: 100%;
+  }
+}
+
 
 .price {
     display: flex;
@@ -391,6 +497,27 @@ footer a {
     height: 13px;
 }
 
+@media screen and (min-width: 768px) {
+
+    header img {
+        height: 400px;
+        object-fit: cover;
+    }
+
+    .menu {
+        width: unset;
+        width: 80%;
+        margin: auto;
+        padding: 50px 150px;
+    }
+
+    .menu h1 {
+        margin: auto;
+    }
+    
+
+}
+
 @media screen and (min-width: 960px) {
 
 /* Accueil */
@@ -410,21 +537,20 @@ footer a {
     column-gap: 30px;
 }
 
-.cards {
+.restaurants {
     display: flex;
     flex-direction: column;
 }
 
-.row {
+.cards {
     display: flex;
-    flex-direction: row;
-    column-gap: 90px;
-
+    flex-direction: row; 
 }
+
+
 .cards a {
     width: unset;
     height: unset; 
-    
 }
 
 .cards img {
@@ -448,18 +574,13 @@ header img {
     width: unset;
     width: 80%;
     margin: auto;
-    padding: 50px 210px;
+    padding: 50px 190px;
 }
 
 .menu h1 {
     margin: auto;
 }
 
-.heart {
-    position: absolute;
-    left: 70%;
-    top:4%;
-}
 
 
 /* Footer */
