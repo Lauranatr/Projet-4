@@ -188,9 +188,15 @@ button {
 
 
 
-i:hover {
-    color:#9356DC;
+.choice:hover { 
+    background-color: #F5EDFF;
 }
+
+.choice:hover 
+i {
+color: #9356DC;
+}
+
 
 /* Restaurants */
 
@@ -309,6 +315,10 @@ header img {
     right:30px;
 }
 
+i:hover {
+    color:#9356DC;
+}
+
 
 .carte {
     display: flex;
@@ -326,8 +336,6 @@ header img {
     display: flex;
     flex-direction: column;
     row-gap: 12px;
-    overflow:hidden; 
-    
 }
 
 
@@ -339,7 +347,16 @@ header img {
     display: flex;
     flex-direction: column;
     width: 100%;
+    height: 59px;
     position: relative;
+}
+
+.carte div button h3 {
+    white-space:nowrap; 
+    text-overflow:ellipsis;
+}
+
+.carte div button p {
     white-space:nowrap; 
     text-overflow:ellipsis;
 }
@@ -407,7 +424,7 @@ header img {
 .anim10 {
     animation-duration: 2s;
     animation-name: slidein;
-    animation-delay: 2.1s;
+    
 }
 
 @keyframes slidein {
@@ -431,11 +448,45 @@ header img {
     bottom: 19%;
 }
 
+.validation {
+    visibility : hidden;
+    width: 69px;
+    height: 59px;
+    left: 100%;
+    top: 0%;
+    border-radius: 0px 15px 15px 0px;
+    align-items: center;
+    justify-content: center;
+    background-color: #99E2D0;
+    position: absolute;
+}
 
-/* Animation */
+.fa-circle-check {
+    color: white;
+    font-size: 20px;
+}
 
+.carte button:active 
+.validation {
+    visibility: visible;
+    animation: slide-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
 
+.carte button:active 
+.price {
+    visibility: visible;
+    animation: slide-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+}
 
+  @keyframes slide-left {
+    0% {
+              transform: translateX(0);
+    }
+    100% {
+              transform: translateX(-69px);
+    }
+  }
+  
 
 /* Bouton commander */
 .commande {
@@ -538,30 +589,21 @@ footer a {
 }
 
 .restaurants {
-    display: flex;
-    flex-direction: column;
+    height: unset;
 }
 
 .cards {
+    flex-direction: unset;
+    flex-direction: row;
+    row-gap: unset;
+    column-gap: 30px;
+}
+
+.restaurants article {
     display: flex;
-    flex-direction: row; 
+    width: 100%;
 }
 
-
-.cards a {
-    width: unset;
-    height: unset; 
-}
-
-.cards img {
-    height: unset;
-    height: 160px;
-}
-
-.restaurants {
-    height: unset;
-    row-gap: 30px;
-}
 
 /* Page restaurants */
 
@@ -580,7 +622,6 @@ header img {
 .menu h1 {
     margin: auto;
 }
-
 
 
 /* Footer */
