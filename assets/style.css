@@ -100,15 +100,17 @@ button {
     background: linear-gradient(90deg, #FF79DA, #eecceb, #9356DC);
     background-size: 80%;
     text-align: center;
-    top: 47%;
+    top: 48%;
     animation: animate 3s infinite;
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: rgba(255, 255, 255, 0);
 }
 
-.logo-loader h1 {
+.logo-loader h2 {
     font-size: 30px;
+    font-family: 'Shrikhand';
+    font-weight: 400;
 }
 
 @keyframes animate {
@@ -360,6 +362,12 @@ color: #9356DC;
     border-radius: 50px 50px 0px 0px;
     margin-top: 230px;
 }
+
+.menu h2{
+    font-family: 'Shrikhand';
+    font-weight: 400;
+    font-size: 30px;
+}
     
 .restaurants-img {
     max-width: 2000px;
@@ -405,14 +413,14 @@ i:hover {
     padding-bottom: 5px;
 }
 
-.carte div {
+.container {
     display: flex;
     flex-direction: column;
     row-gap: 12px;
 }
 
 
-.carte div button {
+.card-menu {
     background: white;
     box-shadow: 0px 4.01149px 15.0431px rgba(0, 0, 0, 0.1);
     border-radius: 15.0431px;
@@ -427,7 +435,7 @@ i:hover {
     animation-fill-mode: forwards;
 }
 
-.carte div button h3 {
+.card-menu h3 {
     white-space:nowrap; 
     text-overflow:ellipsis;
     overflow: hidden;
@@ -435,7 +443,7 @@ i:hover {
     text-align: left;
 }
 
-.carte div button p {
+.card-menu p {
     white-space:nowrap; 
     text-overflow:ellipsis;
     overflow: hidden;
@@ -540,8 +548,6 @@ i:hover {
     left: 100%;
     top: 0%;
     border-radius: 0px 15px 15px 0px;
-    align-items: center;
-    justify-content: center;
     background-color: #99E2D0;
     position: absolute;
     animation-fill-mode: forwards;
@@ -550,26 +556,31 @@ i:hover {
 .fa-circle-check {
     color: white;
     font-size: 20px;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    left: 35%;
+    bottom: 33%;
 }
 
-.carte button:hover
+.card-menu:hover
 .validation {
     visibility: visible;
     animation: slide-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-.carte button:hover
+.card-menu:hover
 .price {
     visibility: visible;
     animation: slide-left 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
 }
 
-.carte button:hover
+.card-menu:hover
 p {
     width: 60%;
 }
 
-.carte button:hover
+.card-menu:hover
 h3 {
     width: 60%;
 }
